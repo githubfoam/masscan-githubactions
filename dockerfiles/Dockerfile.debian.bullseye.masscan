@@ -16,7 +16,8 @@ RUN set -xe && \
     apt-get install -y git make gcc && \
     git clone https://github.com/robertdavidgraham/masscan && cd masscan && \
     make  && \
-    ls -lai masscan/bin && \
+    #ls: cannot access 'masscan/bin': No such file or directory
+    # ls -lai masscan/bin && \
     make install  && \
     make -j      
 
