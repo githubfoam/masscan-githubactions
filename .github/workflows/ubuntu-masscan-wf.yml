@@ -3,9 +3,9 @@ name: "masscan with ubuntu  CI workflow"
 
 on:
   push:
-    branches: [ test ]
-  # schedule:
-  #     - cron:  '0 0 1 * *' ##execution of a task in the first minute of the month  
+    branches: [ main ]
+  schedule:
+      - cron:  '0 0 1 * *' ##execution of a task in the first minute of the month  
 
 
 jobs:
@@ -48,11 +48,6 @@ jobs:
         echo "################## ENTRYPOINT ##################"
         docker inspect -f '{{.Config.Entrypoint}}' ${name}:${version}
         echo "################## ENTRYPOINT ##################"
-        # the input device is not a TTY
-        #docker run  -it --rm --net=host ${name}:${version} -h
-        #the input device is not a TTY
-        #docker run  -it --rm --net=host ${name}:${version} --regress        
-        #FAIL: unknown command-line parameter "masscan"
         docker run ${name}:${version} --regress
         #docker run ${name}:${version} -h  
 
