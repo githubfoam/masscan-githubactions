@@ -40,5 +40,7 @@ jobs:
         docker image inspect ${name}:${version}
         echo "################## ENTRYPOINT ##################" 
         docker inspect -f '{{.Config.Entrypoint}}' ${name}:${version}
-        echo "################## ENTRYPOINT ##################"             
+        echo "################## ENTRYPOINT ##################"       
+        docker run ${name}:${version} --regress
+        #docker run ${name}:${version} -h               
 
