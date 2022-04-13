@@ -10,7 +10,7 @@ on:
 jobs:
 
   masscan-bullseye-ubuntu-latest-job:
-    name: "masscan with debian bullseye docker ubuntu latest"
+    name: "build masscan(source) with debian bullseye docker ubuntu latest"
     runs-on: ubuntu-latest
     env:
       distribution: "debian" #https://hub.docker.com/_/debian

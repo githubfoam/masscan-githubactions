@@ -11,7 +11,7 @@ on:
 jobs:
 
   masscan-kalilinux-ubuntu-latest-job:
-    name: "build masscan with ubuntu 16.04 on ubuntu latest"
+    name: "build masscan(package) with ubuntu 16.04 on ubuntu latest"
     runs-on: ubuntu-latest
     env:
       version: "latest"

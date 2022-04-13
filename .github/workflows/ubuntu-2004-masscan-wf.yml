@@ -11,7 +11,7 @@ on:
 jobs:
 
   masscan-2004-ubuntu-latest-job:
-    name: "build masscan with ubuntu 20.04 on ubuntu latest"
+    name: "build masscan(package) with ubuntu 20.04 on ubuntu latest"
     runs-on: ubuntu-latest
     env:
       version: "2004"
