@@ -8,7 +8,7 @@ RUN set -xe && \
     apt-get -qqy upgrade
 
 RUN set -xe && \
-    apt-get install masscan -y
+    apt-get install libpcap-dev masscan -y
 
 ENTRYPOINT ["masscan"]
 CMD ["-h"]
