@@ -8,8 +8,7 @@
 ~~~~
 
 $ git clone https://github.com/githubfoam/masscan-githubactions.git
-$ cd masscan-githubactions/dockerfiles
-$ docker build -t masscan/kalilinux . --file Dockerfile.kali.masscan
+$ docker build -t masscan/kalilinux . --file masscan-githubactions/dockerfiles/Dockerfile.kali.masscan
 $ docker image ls
 REPOSITORY               TAG       IMAGE ID       CREATED         SIZE
 masscan/kalilinux        latest    f7927dbe090b   2 minutes ago   165MB
